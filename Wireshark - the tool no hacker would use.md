@@ -19,6 +19,7 @@ video links to http/https
 
 
 ### issue #2: unencrypted dns
+screenshots
 videos explaining dns
 
 
