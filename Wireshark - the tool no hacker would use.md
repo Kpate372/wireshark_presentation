@@ -13,6 +13,7 @@ exploitation of wifi
 
 ### issue #1: unencrypted https
 video links to http/https
+screenshot (khushali)
 
 #### tutorial on the exploit (way2sms)
 
