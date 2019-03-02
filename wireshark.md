@@ -44,6 +44,8 @@ This is shocking! Without any fancy tools login data can be seen all over the ne
 Today most web services offer a communication over *HTTPS*. *Google* even started marking *HTTP requests* as **NOT SECURE** in its browser *Chrome* ([blog post](https://www.blog.google/products/chrome/milestone-chrome-security-marking-http-not-secure/)). And the trend is clear: More and more services caring about encrypting confidential data and change to *HTTPS* (see on [searchenginewatch.com](https://searchenginewatch.com/2018/04/11/the-state-of-https-in-2018-why-should-you-migrate/)).
 
 ### issue #2: unencrypted *DNS*
+The *Domain Name System (DNS)* is a protocol within the set of standards for how computers exchange data on the Internet and on many private networks. DNS resolves domain names to *Internet Protocol (IP)* addresses. When a URL is entered into the web browser, the DNS server uses its resources to resolve the domain name into the IP address for the appropriate web server and retrieves the web page. If you want to check out how the *DNS* server works you can find great and quick explanation in this [video](https://www.youtube.com/watch?v=mpQZVYPuDGU).
+
 screenshots
 videos explaining *DNS*
 
