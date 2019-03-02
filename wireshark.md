@@ -43,9 +43,9 @@ This is shocking! Without any fancy tools login data can be seen all over the ne
 
 Today most web services offer a communication over *HTTPS*. *Google* even started marking *HTTP requests* as **NOT SECURE** in its browser *Chrome* ([blog post](https://www.blog.google/products/chrome/milestone-chrome-security-marking-http-not-secure/)). And the trend is clear: More and more services caring about encrypting confidential data and change to *HTTPS* (see on [searchenginewatch.com](https://searchenginewatch.com/2018/04/11/the-state-of-https-in-2018-why-should-you-migrate/)).
 
-### issue #2: unencrypted dns
+### issue #2: unencrypted *DNS*
 screenshots
-videos explaining dns
+videos explaining *DNS*
 
 ```
 ip.addr == 192.222.0.20 and dns
