@@ -20,7 +20,7 @@ Since Wireshark is basically a tool making package traffic in a network visible 
 ### issue #1: unencrypted *HTTP*
 The *HyperText Transfer Protocol (HTTP)* is a application layer protocol for any data exchange in a client-server communication. It furthermore is a connectionless protocol based on the transport layer protocol *TCP (Transmission Control Protocol)* (often Port 80) and is therefore not encrypted. Information is exchanged in a stateless request and response cycle. Important request methods are `GET`, `POST` and `PUT` while for example `200 OK` is the most common response message. If you want to refresh your knowledge on *HTTP* you can find a great and short explanation in this [video](https://www.youtube.com/watch?v=eesqK59rhGA).
 
-The broadcast property of *WiFi* and the unencrypted content of *HTTP* allow hackers to gain confidential data from tracking the sent packages with*Wireshark*. The application of some filters to the packages allows her or him to look for interesting *HTTP* packages. In the following an example is explained in more detail.
+The broadcast property of *WiFi* and the unencrypted content of *HTTP* allow hackers to gain confidential data from tracking the sent packages with *Wireshark*. The application of some filters to the packages allows her or him to look for interesting *HTTP* packages. In the following an example is explained in more detail.
 
 #### Tutorial for getting confidential login data from a user of *way2sms.com*
 
