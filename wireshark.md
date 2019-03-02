@@ -11,7 +11,7 @@ link to a list of common filters in wireshark
 pictures of internet layers
 
 ## Wireshark in the context of HACKING
-Since Wireshark is basically a tool making package traffic in a network visibile it is perfectly suitable to exploit some weaknessess of broadcasting networks like WiFi. As you might remember: Using WiFi is nothing more than just shouting out loud the information you want to share and hoping that the WiFi router understands it. For us as hackers this means that we can also just listen and maybe gain some valuable insight. A great starting point for gaining something are unencrypted protocols. In the following two intersting widely used protocols will be examined.
+Since Wireshark is basically a tool making package traffic in a network visibile it is perfectly suitable for exploiting some weaknessess of broadcasting networks like WiFi. As you might remember: Using WiFi is nothing more than just shouting out loud the information you want to share and hoping that the WiFi router understands it. For us as hackers this means that we can also just listen and maybe gain some valuable insight. A great starting point for gaining something are unencrypted protocols. In the following two intersting widely used protocols will be examined.
 
 ### issue #1: unencrypted https
 video links to http/https
