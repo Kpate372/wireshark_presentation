@@ -16,6 +16,10 @@ Since Wireshark is basically a tool making package traffic in a network visibile
 ### issue #1: unencrypted http
 The HyperText Transfer Protocol (HTTP) is a widely used application layer protocol for any data exchange in a client-server communication. It furthermore is a connectionless protocol based on the transport layer protocol TCP (on Port 80). Information is exchanged in a stateless request and response cycle. Important request methods are GET, POST and PUT while for example 200 OK is the most common response message. If you want to refresh your knowledge on HTTP you can find a great and short explaination in this [video](https://www.youtube.com/watch?v=eesqK59rhGA).
 
+´´´
+ip.addr == 192.222.0.20
+´´´
+
 way2sms.com exploit, screenshot (khushali)
 
 https (explain, video)
