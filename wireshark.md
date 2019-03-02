@@ -10,6 +10,10 @@ link to a list of common filters in wireshark
 ## The internet is organized in layers
 pictures of internet layers
 
+![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/layersWirehark.JPG?raw=true)
+
+
+
 ## Wireshark in the context of HACKING
 Since Wireshark is basically a tool making package traffic in a network visibile it is perfectly suitable for exploiting some weaknessess of broadcasting networks like WiFi. As you might remember: Using WiFi is nothing more than just shouting out loud the information you want to share and hoping that the WiFi router understands it. For us as hackers this means that we can also just listen and maybe gain some valuable insight. A great starting point for gaining something are unencrypted protocols. In the following two intersting widely used protocols will be examined.
 
@@ -36,14 +40,8 @@ Given all the remaining packages the hacker can check them manually or look for 
 For demonstration purposes the attacker and victim can be simulated on one computer but it also works for two different agents in the same network.
 
 
-way2sms.com exploit, screenshot (khushali)
-
 https (explain, video)
 current news and trends
-
-
-#### tutorial on the exploit (way2sms)
-
 
 
 ### issue #2: unencrypted dns
@@ -54,11 +52,6 @@ videos explaining dns
 ip.addr == 192.222.0.20 and dns
 ```
 
-
-
-[link to google](www.google.com)
-
-![hello](https://github.com/sbleh/wireshark_presentation/blob/master/Capture.JPG?raw=true)
 
 
 
