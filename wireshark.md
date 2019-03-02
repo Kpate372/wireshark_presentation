@@ -41,7 +41,7 @@ For demonstration purposes the attacker and victim can be simulated on one compu
 
 This is shocking! Without any fancy tools login data can be seen all over the network. So never login somewhere if you are in a public WiFi! Never? No. Help is on the way and it is called *HTTP**S***, where the s stands for **security**. It is basically *HTTP* over *SSL (Secure Socket Layer)* and therefore encrypted. The protocoll uses a public and private key encrypton and is dependent on a *certificate authority*. If you want to understand the idea of *HTTPS* and *SSL* this short [video](https://www.youtube.com/watch?v=4nGrOpo0Cuc) might help.
 
-Today the majority of web services offer a communication over *HTTPS*. *Google* even started marking *http* requests as **NOT SECURE** in its browser *Chrome* ([blog post](https://www.blog.google/products/chrome/milestone-chrome-security-marking-http-not-secure/)). And the trend is clear: More and more services caring about encrypting confidential data and change to *HTTPS* (see on [searchenginewatch.com](https://searchenginewatch.com/2018/04/11/the-state-of-https-in-2018-why-should-you-migrate/
+Today the majority of web services offer a communication over *HTTPS*. *Google* even started marking *HTTP requests* as **NOT SECURE** in its browser *Chrome* ([blog post](https://www.blog.google/products/chrome/milestone-chrome-security-marking-http-not-secure/)). And the trend is clear: More and more services caring about encrypting confidential data and change to *HTTPS* (see on [searchenginewatch.com](https://searchenginewatch.com/2018/04/11/the-state-of-https-in-2018-why-should-you-migrate/
 )).
 
 ### issue #2: unencrypted dns
