@@ -46,8 +46,9 @@ Today most web services offer a communication over *HTTPS*. *Google* even starte
 ### issue #2: unencrypted *DNS*
 The *Domain Name System (DNS)* is a protocol within the set of standards for how computers exchange data on the Internet and on many private networks. DNS resolves domain names to *Internet Protocol (IP)* addresses. When a URL is entered into the web browser, the DNS server uses its resources to resolve the domain name into the IP address for the appropriate web server and retrieves the web page. If you want to check out how the *DNS* server works you can find great and quick explanation in this [video](https://www.youtube.com/watch?v=mpQZVYPuDGU).
 
-screenshots
-videos explaining *DNS*
+Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packages from *WireShark*. The application of some filters to the packages allows hackers to look for interesting observations in *DNS* packages. In the following, an example is expalined in more detail.
+
+![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSpackets.JPG?raw=true)
 
 ```
 ip.addr == 192.222.0.20 and dns
