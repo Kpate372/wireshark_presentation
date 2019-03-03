@@ -128,14 +128,14 @@ The hacker can look for all *DNS* requests in the respective network by pressing
 
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSQuery.JPG?raw=true)
 
-Given all the remaining packets, the hacker can easily track the *IP* address of users and can also track the behavour of users over a period of time. For example, filtering for the victims *IP address* and for all *DNS* packets will give the network behaviour for a particular *IP* address.
+Given all the remaining packets, the hacker can easily track the *IP* address of users and can also track the behaviour of users over a period of time. For example, filtering for the victims *IP address* and for all *DNS* packets will give the network behaviour for a particular *IP* address.
 
 ```
 ip.addr == 192.222.0.20 and dns
 ```
 The hackers can hijack domain names by manipulating their DNS records to redirect victims to malicious servers. In the above tutorial, after getting the credentails of user the hacker can redirect victim to a fake log in form by manipulating the victim DNS record.
 
-
+To mitigate the effects of DNS hijacking, most web services have started using *HTTPS* combined with a security mechanism called *HTTP Strict Transport Security (HSTS)*. It is honored by all modern browsers and it prevents protocol downgrade attacks and cookie hijacking and instructs browsers to always access a website over encrypted connections (HTTPS). For more information on *HSTS* (see on [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
 
 
 
