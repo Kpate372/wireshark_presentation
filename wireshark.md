@@ -123,19 +123,21 @@ The *Domain Name System (DNS)* is a protocol within the set of standards for how
 
 Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packages from *WireShark*. The application of some filters to the packages allows hackers to look for interesting observations in *DNS* packages. In the following, an example is explained in more detail.
 
-The hacker can look for all *DNS* requests in the respective network by pressing the *shark button* in the top left corner of *WireShark*. As explained in above tutorial, after the victim logged in to *way2sms.com* the hacker can apply filter *dns* to get all the *DNS* requests in the selected network. These requests are capable of handling different functions such as to look up an *IP* address of host name and look up a host name from an *IP* address. The following images shows some *DNS* packets and *DNS* query.
+The hacker can look for all *DNS* requests in the respective network by pressing the *shark button* in the top left corner of *WireShark*. As explained in above tutorial, after the victim logged in to *way2sms.com* the hacker can apply the *dns* filter to get all the *DNS* requests in the selected network. These requests are capable of handling different functions such as looking up an *IP* address of host name and looking up a host name from an *IP* address. The following images shows some *DNS* packets and *DNS* query.
+
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSpackets.JPG?raw=true)
 
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSQuery.JPG?raw=true)
 
-Given all the remaining packets, the hacker can easily track the *IP* address of users and can also track the behaviour of users over a period of time. For example, filtering for the victims *IP address* and for all *DNS* packets will give the network behaviour for a particular *IP* address.
+Given all the remaining packets, the hacker can easily track the *IP* address of users and can also track the behaviour of users over a period of time. For example, filtering for the victims *IP address* and for all *DNS* packets will show the network behaviour for a particular *IP* address.
 
 ```
 ip.addr == 192.222.0.20 and dns
 ```
+
 In the above tutorial, after getting the credentails of user the hacker can redirect victim to a fake log in form by manipulating the victim DNS record.
 
-To mitigate the effects of DNS exploitation, most web services have started using *HTTPS* combined with a security mechanism called *HTTP Strict Transport Security (HSTS)*. It is honored by all modern browsers and it prevents protocol downgrade attacks and cookie hijacking and instructs browsers to always access a website over encrypted connections (HTTPS). For more information on *HSTS* (see on [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
+To mitigate the effects of DNS exploitation, most web services have started using *HTTPS* combined with a security mechanism called *HTTP Strict Transport Security (HSTS)*. It is supported by all modern browsers and it prevents protocol downgrade attacks and cookie hijacking and instructs browsers to always access a website over encrypted connections (HTTPS). For more information on *HSTS* (see on [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
 
 
 
