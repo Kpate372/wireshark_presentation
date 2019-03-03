@@ -135,8 +135,6 @@ Given all the remaining packets, the hacker can easily track the *IP* address of
 ip.addr == 192.222.0.20 and dns
 ```
 
-In the above tutorial, after getting the credentails of user the hacker can redirect victim to a fake log in form by manipulating the victim DNS record.
-
 To mitigate the effects of DNS exploitation, most web services have started using *HTTPS* combined with a security mechanism called *HTTP Strict Transport Security (HSTS)*. It is supported by all modern browsers and it prevents protocol downgrade attacks and cookie hijacking and instructs browsers to always access a website over encrypted connections (HTTPS). For more information on *HSTS* (see on [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
 
 
