@@ -4,6 +4,7 @@ Labeled by Aleks as a "rather standard" tool with "not much application in hacki
 
 ## What is Wireshark?
 link to wireshark website
+Wireshark is a complete package filled with network analysis tools. Wireshark is not only a packet sniffer but also a packet analyzer, password hacker, and a firewall. It can also detect any denial of service attack on your network and can identify possible hacker. Wireshark is also used sometimes as a tool to detect if anyone is spying on you.
 link to a list of common filters in wireshark
 
 
