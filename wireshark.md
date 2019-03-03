@@ -7,17 +7,13 @@ Labeled by Aleks as a "rather standard" tool with "not much application in hacki
 Wireshark is a complete package filled with network analysis tools. Wireshark is not only a packet sniffer but also a packet analyzer, password hacker, and a firewall. It can also detect any denial of service attack on your network and can identify possible hacker. Wireshark is also used sometimes as a tool to detect if anyone is spying on you. 
 
 #### Capturing packets
-By selecting the name of interface on the opening window we can see the packets captured on screen and packets captured by wireshark are in real time.The packets are captured as shown in the picture below.
+By selecting the name of interface on the opening window we can see the packets captured on screen and packets captured by wireshark are in real time.The packets are captured as shown ![image](https://linuxsecurityblog.files.wordpress.com/2016/08/wireshark-packets-2.png?w=569&h=337&zoom=2)
 
-![image](https://linuxsecurityblog.files.wordpress.com/2016/08/wireshark-packets-2.png?w=569&h=337&zoom=2)
+#### Filtering packets
+Filtering is used to identify a specific packet. For example, you can filter a traffic received by your browser or from an application. You can also filter packets going through protocols such as DNS, HTTP or TCP. How the packets can be filtered is shown. ![Filter](https://linuxsecurityblog.files.wordpress.com/2016/08/packrts-filter.png?w=569&h=396&zoom=2). By clicking on packets and selecting follow stream will automatically add a filter of that packet and Wireshark will show all the packets related to it.
 
-#### Filtering packets:
-Filtering is used to identify a specific packet. For example, you can filter a traffic received by your browser or from an application. You can also filter packets going through protocols such as DNS, HTTP or TCP. How the packets can be filtered is shown in the picture below.
-
-![Filter](https://linuxsecurityblog.files.wordpress.com/2016/08/packrts-filter.png?w=569&h=396&zoom=2). 
-
-By clicking on packets and selecting follow stream will automatically add a filter of that packet and Wireshark will show all the packets related to it.
-
+#### Inspecting packets
+Inspecting a packet helps you to analyze its details. This will let you know the origin of the packet and other details. To do so, click on a packet to select it and its details will be shown. ![](https://linuxsecurityblog.files.wordpress.com/2016/08/analyzing-packets1.png?w=569&zoom=2). Right-click on any packet and select filter. This will show all the related packets that have been captured.
 
 ## The internet is organized in layers
 The OSI model (Open System Interconnection) model defines a computer networking framework to implement protocols in seven layers. A protocol in the networking terms is a kind of negotiation and rule in between two networking entities. The OSI model uses layers to help give a visual description of what is going on with a networking system. OSI model helps to narrow down problems in network, for instance it can show whether it is physical issue or something with the application.  
@@ -96,25 +92,25 @@ The Application layer is also called as the layer 7 of the OSI model. Here are t
 
 
 ## Wireshark in the context of HACKING
-Since Wireshark is basically a tool making packet traffic in a network visible it is perfectly suitable for exploiting some weaknesses of broadcasting networks like *WiFi*. As you remember: Using *WiFi* is nothing more than just shouting out loud the information you want to share and hoping that the *WiFi router* understands it. For us as hackers this means that we can also just listen and maybe gain some valuable insight. A great starting point for that are unencrypted protocols. In the following two interesting and widely used protocols will be examined.
+Since Wireshark is basically a tool making package traffic in a network visible it is perfectly suitable for exploiting some weaknesses of broadcasting networks like *WiFi*. As you remember: Using *WiFi* is nothing more than just shouting out loud the information you want to share and hoping that the *WiFi router* understands it. For us as hackers this means that we can also just listen and maybe gain some valuable insight. A great starting point for that are unencrypted protocols. In the following two interesting and widely used protocols will be examined.
 
 ### issue #1: unencrypted *HTTP*
 The *HyperText Transfer Protocol (HTTP)* is a application layer protocol for any data exchange in a client-server communication. It furthermore is a connectionless protocol based on the transport layer protocol *TCP (Transmission Control Protocol)* (often Port 80) and is therefore not encrypted. Information is exchanged in a stateless request and response cycle. Important request methods are `GET`, `POST` and `PUT` while for example `200 OK` is the most common response message. If you want to refresh your knowledge on *HTTP* you can find a great and short explanation in this [video](https://www.youtube.com/watch?v=eesqK59rhGA).
 
-The broadcast property of *WiFi* and the unencrypted content of *HTTP* allow hackers to gain confidential data from tracking the sent packets with *Wireshark*. The application of some filters to the packets allows her or him to look for interesting *HTTP* packets. In the following an example is explained in more detail.
+The broadcast property of *WiFi* and the unencrypted content of *HTTP* allow hackers to gain confidential data from tracking the sent packages with *Wireshark*. The application of some filters to the packages allows her or him to look for interesting *HTTP* packages. In the following an example is explained in more detail.
 
 #### Tutorial for getting confidential login data from a user of *way2sms.com*
 
 Given a user of *way2sms.com* in your *WiFi* network trying to log in to his account and the hacker simultaneously tracking the traffic of the network allows her or him to read out the user's name and password.
 
-Therefore, the hacker must select the respective network in *Wireshark* and start tracking by pressing the *shark button* in the top left corner. After the victim logged in to *way2sms.com* the hacker can apply some filters to the tracked packets. For example, filtering for the victims *IP adress* (if known) and for all *HTTP* packets will reduce the number of displayed packets. Instead, filtering for the *TCP* port 80 might also help.
+Therefore, the hacker must select the respective network in *Wireshark* and start tracking by pressing the *shark button* in the top left corner. After the victim logged in to *way2sms.com* the hacker can apply some filters to the tracked packages. For example, filtering for the victims *IP adress* (if known) and for all *HTTP* packages will reduce the number of displayed packages. Instead, filtering for the *TCP* port 80 might also help.
 
 ```
 ip.addr == 192.222.0.20 and http
 tcp.port == 80
 ```
 
-Given all the remaining packets the hacker can check them manually or look for promising packets. In the example of *way2sms.com* a *POST* request can be found. Displaying the packet, the user name and password can be extracted easily. 
+Given all the remaining packages the hacker can check them manually or look for promising packages. In the example of *way2sms.com* a *POST* request can be found. Displaying the package, the user name and password can be extracted easily. 
 
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/httpPOST.JPG?raw=true)
 
@@ -127,7 +123,7 @@ Today most web services offer a communication over *HTTPS*. *Google* even starte
 ### issue #2: unencrypted *DNS*
 The *Domain Name System (DNS)* is a protocol within the set of standards for how computers exchange data on the Internet and on many private networks. DNS resolves domain names to *Internet Protocol (IP)* addresses. When a URL is entered into the web browser, the DNS server uses its resources to resolve the domain name into the IP address for the appropriate web server and retrieves the web page. If you want to check out how the *DNS* server works you can find great and quick explanation in this [video](https://www.youtube.com/watch?v=mpQZVYPuDGU).
 
-Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packets from *WireShark*. The application of some filters to the packets allows hackers to look for interesting observations in *DNS* packets. In the following, an example is expalined in more detail.
+Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packages from *WireShark*. The application of some filters to the packages allows hackers to look for interesting observations in *DNS* packages. In the following, an example is expalined in more detail.
 
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSpackets.JPG?raw=true)
 
