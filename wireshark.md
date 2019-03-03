@@ -26,8 +26,8 @@ The data link layer is also called as the Layer 2 of the OSI model. Here are the
 1. Responsible for encoding and decoding of the electrical signals into bits.
 2. Covers electrical signals into frames
 3. The data link layer is divided into two sub-layers
-     > The Media Access Control (MAC) layer
-     > Logical Link Control LLC layer.
+     - The Media Access Control (MAC) layer
+     - Logical Link Control LLC layer.
 4. The MAC sub layer controls how a computer on the network gains access to the data and permission to transmit it.
 5. The LLC layer controls frame synchronization, flow control and error checking.
 6. Devices like ethernet work at this layer
