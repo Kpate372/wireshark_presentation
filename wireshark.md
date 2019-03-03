@@ -121,7 +121,7 @@ Today most web services offer a communication over *HTTPS*. *Google* even starte
 ### issue #2: unencrypted *DNS*
 The *Domain Name System (DNS)* is a protocol within the set of standards for how computers exchange data on the Internet and on many private networks. DNS resolves domain names to *Internet Protocol (IP)* addresses. When a URL is entered into the web browser, the DNS server uses its resources to resolve the domain name into the IP address for the appropriate web server and retrieves the web page. If you want to check out how the *DNS* server works you can find great and quick explanation in this [video](https://www.youtube.com/watch?v=mpQZVYPuDGU).
 
-Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packages from *WireShark*. The application of some filters to the packages allows hackers to look for interesting observations in *DNS* packages. In the following, an example is expalined in more detail.
+Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packages from *WireShark*. The application of some filters to the packages allows hackers to look for interesting observations in *DNS* packages. In the following, an example is explained in more detail.
 
 The hacker can look for all *DNS* requests in the respective network by pressing the *shark button* in the top left corner of *WireShark*. As explained in above tutorial, after the victim logged in to *way2sms.com* the hacker can apply filter *dns* to get all the *DNS* requests in the selected network. These requests are capable of handling different functions such as to look up an *IP* address of host name and look up a host name from an *IP* address. The following images shows some *DNS* packets and *DNS* query.
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSpackets.JPG?raw=true)
@@ -133,9 +133,9 @@ Given all the remaining packets, the hacker can easily track the *IP* address of
 ```
 ip.addr == 192.222.0.20 and dns
 ```
-The hackers can hijack domain names by manipulating their DNS records to redirect victims to malicious servers. In the above tutorial, after getting the credentails of user the hacker can redirect victim to a fake log in form by manipulating the victim DNS record.
+In the above tutorial, after getting the credentails of user the hacker can redirect victim to a fake log in form by manipulating the victim DNS record.
 
-To mitigate the effects of DNS hijacking, most web services have started using *HTTPS* combined with a security mechanism called *HTTP Strict Transport Security (HSTS)*. It is honored by all modern browsers and it prevents protocol downgrade attacks and cookie hijacking and instructs browsers to always access a website over encrypted connections (HTTPS). For more information on *HSTS* (see on [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
+To mitigate the effects of DNS exploitation, most web services have started using *HTTPS* combined with a security mechanism called *HTTP Strict Transport Security (HSTS)*. It is honored by all modern browsers and it prevents protocol downgrade attacks and cookie hijacking and instructs browsers to always access a website over encrypted connections (HTTPS). For more information on *HSTS* (see on [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)).
 
 
 
