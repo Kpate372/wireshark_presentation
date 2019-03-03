@@ -110,7 +110,7 @@ tcp.port == 80
 
 Given all the remaining packages the hacker can check them manually or look for promising packages. In the example of *way2sms.com* a *POST* request can be found. Displaying the package, the user name and password can be extracted easily. 
 
-![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/httpPOST.JPG?raw=true)
+![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/httpPOST2.JPG?raw=true)
 
 For demonstration purposes the attacker and victim can be simulated on one computer, but it also works for two different agents in the same network.
 
