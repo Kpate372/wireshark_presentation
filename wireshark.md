@@ -10,7 +10,7 @@ link to a list of common filters in wireshark
 ## The internet is organized in layers
 The OSI model (Open System Interconnection) model defines a computer networking framework to implement protocols in seven layers. A protocol in the networking terms is a kind of negotiation and rule in between two networking entities. The OSI model uses layers to help give a visual description of what is going on with a networking system. OSI model helps to narrow down problems in network, for instance it can show whether it is physical issue or something with the application.  
 
-####Physical layer
+#### Physical layer
 
 The Physical layer is also called as the Layer 1. Here are the basic functionalities of the Physical layer:
 
@@ -19,7 +19,7 @@ The Physical layer is also called as the Layer 1. Here are the basic functionali
 3. Devices like repeater, hub, cables, ethernet work on this layer.
 4. Protocols like RS232, ATM, FDDI, Ethernet work on this layer.
 
-####Data Link layer
+#### Data Link layer
 
 The data link layer is also called as the Layer 2 of the OSI model. Here are the basic functionalities of the data link layer:
 
@@ -32,7 +32,7 @@ The data link layer is also called as the Layer 2 of the OSI model. Here are the
 5. The LLC layer controls frame synchronization, flow control and error checking.
 6. Devices like ethernet work at this layer
 
-####Network Layer
+#### Network Layer
 
 The Network layer is also called as the layer 3 of the OSI model. Here are the basic functionalities of the network layer:
 
@@ -42,7 +42,7 @@ The Network layer is also called as the layer 3 of the OSI model. Here are the b
 4. Internet working, error handling, congestion control and packet sequencing work at this layer.
 5. Different network protocols like IP, IPX, AppleTalk work at this layer.
 
-####Transport layer
+#### Transport layer
 
 The Transport  layer is also called as the layer 4 of the OSI model. Here are the basic functionalities of the Transport layer:
 
@@ -51,7 +51,7 @@ The Transport  layer is also called as the layer 4 of the OSI model. Here are th
 3. Responsible for complete data transfer.
 4. Protocols like SPX, TCP, UDP work here.
 
-####Session layer
+#### Session layer
 
 The Session  layer is also called as the layer 5 of the OSI model. Here are the basic functionalities of the Session layer:
 
@@ -60,7 +60,7 @@ The Session  layer is also called as the layer 5 of the OSI model. Here are the 
 3. It deals with session and connection coordination.
 4. Protocols like NFS, NetBios names, RPC, SQL work at this layer.
 
-####Presentation layer
+#### Presentation layer
 
 The Presentation layer is also called as the layer 6 of the OSI model. Here are the basic functionalities of the presentation layer:
 
@@ -69,7 +69,7 @@ The Presentation layer is also called as the layer 6 of the OSI model. Here are 
 3. Data semantics and syntax.
 4. Layer 6 Presentation examples include encryption, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI.
 
-####Application Layer
+#### Application Layer
 
 The Application layer is also called as the layer 7 of the OSI model. Here are the basic functionalities of the Application layer:
 
