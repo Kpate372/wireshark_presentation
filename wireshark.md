@@ -9,11 +9,9 @@ Wireshark is a complete package filled with network analysis tools. Wireshark is
 #### Capturing packets
 By selecting the name of interface on the opening window we can see the packets captured on screen and packets captured by wireshark are in real time.The packets are captured as shown ![image](https://linuxsecurityblog.files.wordpress.com/2016/08/wireshark-packets-2.png?w=569&h=337&zoom=2)
 
-#### Filtering packets
-Filtering is used to identify a specific packet. For example, you can filter a traffic received by your browser or from an application. You can also filter packets going through protocols such as DNS, HTTP or TCP. How the packets can be filtered is shown. ![Filter](https://linuxsecurityblog.files.wordpress.com/2016/08/packrts-filter.png?w=569&h=396&zoom=2). By clicking on packets and selecting follow stream will automatically add a filter of that packet and Wireshark will show all the packets related to it.
+#### Filtering packets:
+Filtering is used to identify a specific packet. For example, you can filter a traffic received by your browser or from an application. You can also filter packets going through protocols such as DNS, HTTP or TCP. How the packets can be filtered is shown ![Filter](https://linuxsecurityblog.files.wordpress.com/2016/08/packrts-filter.png?w=569&h=396&zoom=2). By clicking on packets and selecting follow stream will automatically add a filter of that packet and Wireshark will show all the packets related to it.
 
-#### Inspecting packets
-Inspecting a packet helps you to analyze its details. This will let you know the origin of the packet and other details. To do so, click on a packet to select it and its details will be shown. ![](https://linuxsecurityblog.files.wordpress.com/2016/08/analyzing-packets1.png?w=569&zoom=2). Right-click on any packet and select filter. This will show all the related packets that have been captured.
 
 ## The internet is organized in layers
 The OSI model (Open System Interconnection) model defines a computer networking framework to implement protocols in seven layers. A protocol in the networking terms is a kind of negotiation and rule in between two networking entities. The OSI model uses layers to help give a visual description of what is going on with a networking system. OSI model helps to narrow down problems in network, for instance it can show whether it is physical issue or something with the application.  
@@ -103,7 +101,7 @@ The broadcast property of *WiFi* and the unencrypted content of *HTTP* allow hac
 
 Given a user of *way2sms.com* in your *WiFi* network trying to log in to his account and the hacker simultaneously tracking the traffic of the network allows her or him to read out the user's name and password.
 
-Therefore, the hacker must select the respective network in *Wireshark* and start tracking by pressing the *shark button* in the top left corner. After the victim logged in to *way2sms.com* the hacker can apply some filters to the tracked packages. For example, filtering for the victims *IP adress* (if known) and for all *HTTP* packages will reduce the number of displayed packages. Instead, filtering for the *TCP* port 80 might also help.
+Therefore, the hacker must select the respective network in *Wireshark* and start tracking by pressing the *shark button* in the top left corner. After the victim logged in to *way2sms.com* the hacker can apply some filters to the tracked packages. For example, filtering for the victims *IP address* (if known) and for all *HTTP* packages will reduce the number of displayed packages. Instead, filtering for the *TCP* port 80 might also help.
 
 ```
 ip.addr == 192.222.0.20 and http
@@ -125,12 +123,17 @@ The *Domain Name System (DNS)* is a protocol within the set of standards for how
 
 Most people's DNS queries remain unencrypted while flowing over the internet. The broadcast property of *Wi-Fi* and unencrypted nature of *DNS* allows hackers to get access over the network behaviour and can easily track different users browsing different websites by tracking the sent packages from *WireShark*. The application of some filters to the packages allows hackers to look for interesting observations in *DNS* packages. In the following, an example is expalined in more detail.
 
+The hacker can look for all *DNS* requests in the respective network by pressing the *shark button* in the top left corner of *WireShark*. As explained in above tutorial, after the victim logged in to *way2sms.com* the hacker can apply filter *dns* to get all the *DNS* requests in the selected network. These requests are capable of handling different functions such as to look up an *IP* address of host name and look up a host name from an *IP* address. The following images shows some *DNS* packets and *DNS* query.
 ![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSpackets.JPG?raw=true)
+
+![imagecantbefound](https://github.com/sbleh/wireshark_presentation/blob/master/DNSQuery.JPG?raw=true)
+
+Given all the remaining packets, the hacker can easily track the *IP* address of users and can also track the behavour of users over a period of time. For example, filtering for the victims *IP address* and for all *DNS* packets will give the network behaviour for a particular *IP* address.
 
 ```
 ip.addr == 192.222.0.20 and dns
 ```
-
+The hackers can hijack domain names by manipulating their DNS records to redirect victims to malicious servers. In the above tutorial, after getting the credentails of user the hacker can redirect victim to a fake log in form by manipulating the victim DNS record.
 
 
 
