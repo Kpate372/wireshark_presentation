@@ -3,9 +3,14 @@
 Labeled by Aleks as a "rather standard" tool with "not much application in hacking", we had a hard time proving the opposite. There are a few astonishing, easy to exploit weaknesses of broadcasting networks that can be made visible and it is a great tool to look for a starting point for hacking. So, let's dive into it!
 
 ## What is Wireshark?
-link to wireshark website
-Wireshark is a complete package filled with network analysis tools. Wireshark is not only a packet sniffer but also a packet analyzer, password hacker, and a firewall. It can also detect any denial of service attack on your network and can identify possible hacker. Wireshark is also used sometimes as a tool to detect if anyone is spying on you. The packets are captured as shown ![image](https://linuxsecurityblog.files.wordpress.com/2016/08/wireshark-packets-2.png?w=569&h=337&zoom=2)
-link to a list of common filters in wireshark
+
+Wireshark is a complete package filled with network analysis tools. Wireshark is not only a packet sniffer but also a packet analyzer, password hacker, and a firewall. It can also detect any denial of service attack on your network and can identify possible hacker. Wireshark is also used sometimes as a tool to detect if anyone is spying on you. 
+
+#### Capturing packets
+By selecting the name of interface on the opening window we can see the packets captured on screen and packets captured by wireshark are in real time.The packets are captured as shown ![image](https://linuxsecurityblog.files.wordpress.com/2016/08/wireshark-packets-2.png?w=569&h=337&zoom=2)
+
+#### Filtering packets:
+Filtering is used to identify a specific packet. For example, you can filter a traffic received by your browser or from an application. You can also filter packets going through protocols such as DNS, HTTP or TCP. How the packets can be filtered is shown ![Filter](https://linuxsecurityblog.files.wordpress.com/2016/08/packrts-filter.png?w=569&h=396&zoom=2). By clicking on packets and selecting follow stream will automatically add a filter of that packet and Wireshark will show all the packets related to it.
 
 
 ## The internet is organized in layers
